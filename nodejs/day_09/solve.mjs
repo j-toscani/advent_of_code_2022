@@ -6,10 +6,9 @@ const rawInstructions = data.split("\n");
 const instructions = rawInstructions.map(parseInstruction);
 const positions = new Set();
 
-instructions.forEach(createLogMove());
-console.log(positions.size);
+instructions.forEach(applyInstructionTaskOne());
 
-function createLogMove() {
+function applyInstructionTaskOne() {
   const head = { x: 0, y: 0 };
   const tail = { x: 0, y: 0 };
 
